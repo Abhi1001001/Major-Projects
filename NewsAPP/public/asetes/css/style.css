@@ -1,0 +1,26 @@
+.background {
+  background-color: #4361ee;
+}
+.card-title {
+  height: 90px;
+  overflow: hidden;
+}
+.card-text {
+  height: 110px;
+  overflow: hidden;
+}
+.card-source {
+  padding: 3px;
+  background-color: #acb9f4;
+  font-size: 12px;
+}
+.btn-search {
+  border-radius: 3rem;
+  border: none;
+}
+.input-search {
+  border-radius: 3rem;
+}
+.card {
+  border: 1px solid black;
+}
