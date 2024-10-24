@@ -1,0 +1,13 @@
+.card-title{
+    height: 100px;
+    overflow: hidden;
+}
+.card-text{
+    height: 150px;
+    overflow: hidden;
+}
+.card-source{
+    font-size: 15px;
+    padding: 4px;
+    background-color: #4e4eb89a;
+}
