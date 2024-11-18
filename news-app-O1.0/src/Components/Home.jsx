@@ -65,15 +65,15 @@ export default class Home extends Component {
   render() {
     return (
       <>
-        <div className="container-fluid">
+        {this.state.articles.length!=0 && <div className="container-fluid">
           <InfiniteScroll
             dataLength={this.state.articles.length}
             next={this.fetchMoreData}
             hasMore={this.state.articles.length < this.state.totalResults}
             loader={
               <div className="my-2 text-center">
-                <div class="spinner-border text-primary" role="status">
-                  <span class="visually-hidden">Loading...</span>
+                <div className="spinner-border text-primary" role="status">
+                  <span className="visually-hidden">Loading...</span>
                 </div>
               </div>
             }
@@ -102,7 +102,7 @@ export default class Home extends Component {
               })}
             </div>
           </InfiniteScroll>
-        </div>
+        </div>}
       </>
     );
   }

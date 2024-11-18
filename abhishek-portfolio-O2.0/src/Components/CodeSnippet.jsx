@@ -17,10 +17,10 @@ education() {
     ];
 }
 skills() {
-    return [
-        'HTML', 'CSS', 'JavaScript', 'React', 
-        'Redux', 'Saga', 'Bootstrap', 'Tailwind', 'MaterialUI', 'REST API'
-    ];
+    return {
+        mern stack : ['HTML', 'CSS', 'JavaScript', 'React', 'Node', 'Express', 'MongoDB', 'Git & Github'],
+        frameworks : ['Bootstrap', 'Tailwind', 'MaterialUI', 'NextUI']
+};
 }
 }
 `;
