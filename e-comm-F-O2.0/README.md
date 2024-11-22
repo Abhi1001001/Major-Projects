@@ -153,8 +153,3 @@
       <li>Authentication and user roles.</li>
       <li>Search and filter functionalities for the user list.</li>
     </ol>
-    <h2>Live Demo</h2>
-    <ul>
-      <li>The application is deployed on Netlify. You can access it here:</li>
-      <a href="https://user00management.netlify.app/" >User Management App </a>
-    </ul>
