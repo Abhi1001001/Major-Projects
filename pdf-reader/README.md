@@ -64,4 +64,4 @@
 </ol>
 <h3>Deployment</h3>
 <p>The project is deployed on Netlify.</p>
-<a href="link">link</a>
+<a href="https://pdf-viewers.netlify.app/">https://pdf-viewers.netlify.app/</a>
