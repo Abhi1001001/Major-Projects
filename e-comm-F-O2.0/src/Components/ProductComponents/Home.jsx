@@ -67,49 +67,49 @@ export default function Home() {
             <SwiperSlide>
               <img
                 className="md:max-h-[40vh] h-[35vh] w-[100%] object-fill"
-                src="./src/assets/images/banner1.webp"
+                src="./assets/images/banner1.webp"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 className="md:max-h-[40vh] h-[35vh] w-[100%] object-fill"
-                src="./src/assets/images/banner2.webp"
+                src="./assets/images/banner2.webp"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 className="md:max-h-[40vh] h-[35vh] w-[100%] object-fill"
-                src="./src/assets/images/banner3.webp"
+                src="./assets/images/banner3.webp"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 className="md:max-h-[40vh] h-[35vh] w-[100%] object-fill"
-                src="./src/assets/images/banner4.webp"
+                src="./assets/images/banner4.webp"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 className="md:max-h-[40vh] h-[35vh] w-[100%] object-fill"
-                src="./src/assets/images/banner5.webp"
+                src="./assets/images/banner5.webp"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 className="md:max-h-[40vh] h-[35vh] w-[100%] object-fill"
-                src="./src/assets/images/banner6.webp"
+                src="./assets/images/banner6.webp"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 className="md:max-h-[40vh] h-[35vh] w-[100%] object-fill"
-                src="./src/assets/images/banner7.webp"
+                src="./assets/images/banner7.webp"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 className="md:max-h-[40vh] h-[35vh] w-[100%] object-fill"
-                src="./src/assets/images/banner8.webp"
+                src="./assets/images/banner8.webp"
               />
             </SwiperSlide>
           </Swiper>
@@ -163,7 +163,7 @@ export default function Home() {
               <div className="xl:w-64 lg:w-60 w-[40%] xl:h-72 lg:h-64 md:h-auto h-56 rounded-md flex-shrink-0 border-solid border-[#4c4c4c54] border-[1px] m-1 p-2 text-sm md:text-base">
                 <img
                   className="m-auto xl:max-w-52 lg:max-w-48 md:max-w-40 max-w-32 xl:py-11 lg:py-7 md:py-6 py-9"
-                  src="./src/assets/images/gaming.webp"
+                  src="./assets/images/gaming.webp"
                   alt="loading..."
                 />
                 <p>Gaming Products</p>
@@ -173,7 +173,7 @@ export default function Home() {
               <div className="xl:w-64 lg:w-60 w-[40%] xl:h-72 lg:h-64 md:h-auto h-56 rounded-md flex-shrink-0 border-solid border-[#4c4c4c54] border-[1px] m-1 p-2 text-sm md:text-base">
                 <img
                   className="xl:max-w-52 lg:max-w-48 md:max-w-40 max-w-32 xl:py-2 md:py-0 py-4 m-auto"
-                  src="./src/assets/images/mobile.jpeg"
+                  src="./assets/images/mobile.jpeg"
                   alt="loading..."
                 />
                 <p>Mobiles</p>
@@ -183,7 +183,7 @@ export default function Home() {
               <div className="xl:w-64 lg:w-60 w-[40%] xl:h-72 lg:h-64 md:h-auto h-56 rounded-md flex-shrink-0 border-solid border-[#4c4c4c54] border-[1px] m-1 p-2 text-sm md:text-base">
                 <img
                   className="xl:max-w-52 lg:max-w-48 md:max-w-40 max-w-32 xl:py-11 lg:py-8 md:py-9 py-10 m-auto"
-                  src="./src/assets/images/tv.webp"
+                  src="./assets/images/tv.webp"
                   alt="loading..."
                 />
                 <p>TV</p>
@@ -193,7 +193,7 @@ export default function Home() {
               <div className="xl:w-64 lg:w-60 w-[40%] xl:h-72 lg:h-64 md:h-auto h-56 rounded-md flex-shrink-0 border-solid border-[#4c4c4c54] border-[1px] m-1 p-2 text-sm md:text-base">
                 <img
                   className="xl:max-w-52 lg:max-w-48 md:max-w-40 max-w-32 xl:py-2 lg:py-0 md:py-2 py-4 m-auto"
-                  src="./src/assets/images/audio.jpeg"
+                  src="./assets/images/audio.jpeg"
                   alt="loading..."
                 />
                 <p>Audio</p>
@@ -205,7 +205,7 @@ export default function Home() {
           <div>
             <img
               className="h-full"
-              src="./src/assets/images/banner1.webp"
+              src="./assets/images/banner1.webp"
               alt="loading..."
             />
           </div>

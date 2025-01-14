@@ -41,7 +41,7 @@ export default function Navbar() {
           <Link to="/">
             <img
               className="md:max-h-20 max-h-14 "
-              src="./src/assets/images/logo.png"
+              src="./assets/images/logo.png"
               alt="loading..."
             />
           </Link>

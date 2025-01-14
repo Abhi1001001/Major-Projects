@@ -14,14 +14,14 @@ import axios from "axios";
 function* getBestsellerProducts() {
   let auth = JSON.parse(localStorage.getItem("token"))
   console.log(auth);  
-  let response = yield axios.get("http://localhost:5000/bestseller", {headers: {"authorization" : `${auth}`}});
+  let response = yield axios.get("https://e-comm-b-o1-0.onrender.com/bestseller", {headers: {"authorization" : `${auth}`}});
   yield put({ type: SET_BESTSELLER_PRODUCTS, data: response.data });
 }
 
 // sending signup user detail to database ----------->
 function* postSignupUserData(user) {
   yield axios
-    .post("http://localhost:5000/signup", user.payload)
+    .post("https://e-comm-b-o1-0.onrender.com/signup", user.payload)
     .then((response) => {    
       console.log(response.data.newUser);       
       alert(`Welcome ${response.data.newUser.name}`);
@@ -35,7 +35,7 @@ function* postSignupUserData(user) {
 // validating login user detail from database ----------->
 function* postLoginUserData(user) {
   yield axios
-    .post("http://localhost:5000/login", user.payload)
+    .post("https://e-comm-b-o1-0.onrender.com/login", user.payload)
     .then((response) => {
       // console.log("data in saga", response.data);
       if (response.data.token) {       
@@ -53,7 +53,7 @@ function* postLoginUserData(user) {
 // update admin detail in database ----------->
 function* updateUserData(updatedUser) { 
   yield axios
-    .put(`http://localhost:5000/updateuser/${updatedUser.payload._id}`, updatedUser.payload)
+    .put(`https://e-comm-b-o1-0.onrender.com/updateuser/${updatedUser.payload._id}`, updatedUser.payload)
     .then(() => {   
       const userJSON = JSON.stringify(updatedUser.payload);
       localStorage.setItem("user", userJSON);
@@ -66,7 +66,7 @@ function* updateUserData(updatedUser) {
 // search products from database ----------->
 
 function* searchProductsData (searchProductsValue){
-  let response = yield axios.get(`http://localhost:5000/search/${searchProductsValue.payload}`);
+  let response = yield axios.get(`https://e-comm-b-o1-0.onrender.com/search/${searchProductsValue.payload}`);
   yield put({ type: SET_SEARCH_PRODUCTS, data: response.data});
   console.log(response.data);
 }
