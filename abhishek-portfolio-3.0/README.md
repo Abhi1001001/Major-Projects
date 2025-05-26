@@ -4,7 +4,7 @@
   tooling and libraries. This website is a fully responsive, animated showcase
   of my skills, projects, experience, education, and contact information.
 </p>
-<a href="https://abhishek-vishwakarma.netlify.app/">Abhishek-portfolio</a>
+<a style="text-decoration: none;" href="https://abhishek-vishwakarma.netlify.app/">Abhishek-portfolio</a>
 <hr />
 <h2>🚀 Tech Stack</h2>
 <ul>
@@ -148,22 +148,22 @@
 <hr />
 <h2>🌐 Deployment</h2>
 <p>This portfolio is deployed using Netlify and is live at:</p>
-<a href="https://abhishek-vishwakarma.netlify.app/"
+<a style="text-decoration: none;" href="https://abhishek-vishwakarma.netlify.app/"
   >🔗 https://abhishek-vishwakarma.netlify.app/</a
 >
 <hr />
 <h2>🤝 Connect with Me</h2>
 <p>
-  <b>LinkedIn</b
-  ><a href="https://www.linkedin.com/in/abhishek-vishwakarma-127b66227/"
+  <b>LinkedIn : </b
+  ><a style="text-decoration: none;" href="https://www.linkedin.com/in/abhishek-vishwakarma-127b66227/"
     >Abhishek-Vishwakarma-Linkedin</a
   >
 </p>
 <p>
-  <b>GitHub</b
-  ><a href="https://github.com/Abhi1001001">Abhishek-Vishwakarma-Github</a>
+  <b>GitHub : </b
+  ><a style="text-decoration: none;" href="https://github.com/Abhi1001001">Abhishek-Vishwakarma-Github</a>
 </p>
-<p><b>Email</b><a href="mailto:av159593@gmail.com">av159593@gmail.com</a></p>
+<p><b>Email : </b><a style="text-decoration: none;" href="mailto:av159593@gmail.com">av159593@gmail.com</a></p>
 <hr />
 <h2>📌 Purpose</h2>
 <p>This project was created to:</p>
