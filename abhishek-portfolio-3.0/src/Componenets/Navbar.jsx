@@ -47,7 +47,7 @@ export default function Navbar() {
       localStorage.setItem("darkMode", false);
     } else {
       setDarkMode(true);
-      document.querySelector("body").className = "dark";
+      document.querySelector("body").className = "dark bg-[#121212]";
       localStorage.setItem("darkMode", true);
     }
   };
@@ -65,7 +65,7 @@ export default function Navbar() {
   };
   useEffect(() => {
     if (darkMode) {
-      document.querySelector("body").className = "dark";
+      document.querySelector("body").className = "dark bg-[#121212]";
     } else {
       document.querySelector("body").className = "light";
     }
