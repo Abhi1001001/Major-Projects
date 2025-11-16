@@ -12,6 +12,11 @@ import JavascriptIcon from "../Icons/icon-javascript.svg?react";
 import ReduxIcon from "../Icons/icon-redux.svg?react";
 import APIIcon from "../Icons/icon-api.svg?react";
 import GSAPIcon from "../Icons/icon-gsap.svg?react";
+import NextjsIcon from "../Icons/icon-nextjs.svg?react";
+import PostmanIcon from "../Icons/icon-postman.svg?react";
+import VsCodeIcon from "../Icons/icon-vscode.svg?react";
+import NetlifyIcon from "../Icons/icon-netlify.svg?react";
+import VercleIcon from "../Icons/icon-vercle.svg?react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -20,14 +25,71 @@ export default function Skills() {
   // GSAP Animation -------------------------->
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(useGSAP);
+  const tl = gsap.timeline();
   useGSAP(() => {
-    gsap.from(".skills-icon", {
-      duration: 2,
-      y: 80,
+     tl.from(".skill-text", {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".skill-text",
+        scroller: "body",
+        scrub: 1.5,
+        start: "top 85%",
+        end: "top 30%",
+      }
+    });
+    gsap.from(".box-1", {
+      duration: 0.5,
+      x: -80,
+      y: -80,
       opacity: 0,
       stagger: 0.5,
       scrollTrigger: {
-        trigger: ".skills-icon",
+        trigger: ".box-section",
+        scroller: "body",
+        scrub: 1.5,
+        start: "top 85%",
+        end: "top 30%",
+      },
+    });
+    gsap.from(".box-2", {
+      duration: 0.5,
+      x: 80,
+      y: -80,
+      opacity: 0,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".box-section",
+        scroller: "body",
+        scrub: 1.5,
+        start: "top 85%",
+        end: "top 30%",
+      },
+    });
+    gsap.from(".box-3", {
+      duration: 0.5,
+      x: -80,
+      y: 80,
+      opacity: 0,
+      stagger: 0.4,
+      scrollTrigger: {
+        trigger: ".box-section",
+        scroller: "body",
+        scrub: 1.5,
+        start: "top 85%",
+        end: "top 30%",
+      },
+    });
+    gsap.from(".box-4", {
+      duration: 0.5,
+      x: 80,
+      y: 80,
+      opacity: 0,
+      stagger: 0.4,
+      scrollTrigger: {
+        trigger: ".box-section",
         scroller: "body",
         scrub: 1.5,
         start: "top 85%",
@@ -37,127 +99,110 @@ export default function Skills() {
   });
   return (
     <>
-      <div className="max-w-7xl m-auto p-2">
-        <div className="border border-black dark:border-white rounded-xl px-4 lg:py-20 sm:py-14 py-10 flex flex-col justify-center sm:items-start items-center lg:gap-4 overflow-y-hidden">
-          {/* mern stack icons -------------------> */}
-          <section className="font-josefin flex flex-col sm:flex-row items-center justify-center sm:gap-5 gap-2">
-            <h3 className="text-center lg:text-xl sm:text-base text-sm py-2 whitespace-nowrap dark:text-white">
-              MERN STACK
-            </h3>
-            {/* divider div -----------> */}
-            <div className="sm:h-14 h-[1px] bg-black dark:bg-white sm:w-[1px] w-40"></div>
-            <div className="flex flex-row items-center justify-center gap-5 lg:gap-10 sm:gap-5">
-              {/* mongodb icon ---------------> */}
-              <div className="flex flex-col sm:gap-0 gap-1 justify-center items-center text-[#48a248]">
-                <MongodbIcon className="skills-icon lg:w-20 sm:w-16 w-8 sm:border-b-4 border-b-2 border-green-600" />{" "}
-                <span className="lg:text-base sm:text-sm text-xs">M</span>
-              </div>
-              {/* express icon ---------------> */}
-              <div className="flex flex-col justify-center sm:gap-0 gap-1 items-center text-black">
-                <ExpressjsIcon className="skills-icon lg:w-20 sm:w-16 w-8 sm:border-b-4 border-b-2 border-black dark:border-white dark:text-white" />{" "}
-                <span className="lg:text-base sm:text-sm text-xs dark:text-white">
-                  E
-                </span>
-              </div>
-              {/* react icon ---------------> */}
-              <div className="flex flex-col justify-center sm:gap-0 gap-1 items-center text-[#357a89]">
-                <ReactIcon className="skills-icon lg:w-20 sm:w-16 w-8 sm:border-b-4 border-b-2 border-[#357a89]" />{" "}
-                <span className="lg:text-base sm:text-sm text-xs">R</span>
-              </div>
-              {/* node icon ---------------> */}
-              <div className="flex flex-col justify-center sm:gap-0 gap-1 items-center text-[#21a366]">
-                <NodejsIcon className="skills-icon lg:w-20 sm:w-16 w-8 sm:border-b-4 border-b-2 border-[#21a366]" />{" "}
-                <span className="lg:text-base sm:text-sm text-xs">N</span>
+      <div className="p-2 dark:bg-[#000000] font-josefin">
+        <section className=" py-5 px-6 md:px-16 overflow-hidden">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Section */}
+            <div>
+              <p className="skill-text text-[#6ee5ce] font-semibold uppercase tracking-wide sm:text-md text-sm">
+                Our Services
+              </p>
+              <h2 className="skill-text sm:text-4xl text-2xl font-bold mt-2 mb-4 dark:text-white">
+                What <span className="text-[#6ee5ce]">We Do.</span>
+              </h2>
+              <p className="skill-text dark:text-white mb-6 sm:text-base text-sm">
+                I’m a MERN Stack developer with a strong focus on front-end
+                development. Over time, I’ve worked on building and maintaining
+                different web applications and pages, always making sure they
+                look great, run smoothly, and are easy to use.
+              </p>
+              <p className="skill-text dark:text-white mb-6 md:block hidden">
+                I’ve had the chance to work on several projects where I combined
+                creativity with clean code, delivering results that match both
+                user needs and business goals.
+              </p>
+              <p className="skill-text dark:text-white mb-6 md:block hidden">
+                Besides MERN, I also enjoy working with tools like{" "}
+                <b>
+                  Tailwind CSS, Bootstrap, ShadCN UI, HeroUI, GSAP, Next.js, and
+                  Material UI—
+                </b>
+                these help me bring designs to life and make web experiences
+                more interactive and modern.{" "}
+              </p>
+              <div className="skill-text">
+              <button className="bg-[#59d0b4] px-6 py-2 rounded-full text-white hover:bg-teal-400 transition">
+                View All
+              </button>
               </div>
             </div>
-          </section>
 
-          {/* frameworks icons ---------------------> */}
-          <section className="font-josefin flex flex-col sm:flex-row items-center justify-center sm:gap-5 gap-2">
-            <h3 className="text-center lg:text-xl sm:text-base text-sm py-2 whitespace-nowrap dark:text-white">
-              FRAMEWORKS
-            </h3>
-            {/* divider div -----------> */}
-            <div className="sm:h-14 h-[1px] bg-black sm:w-[1px] w-40 dark:bg-white"></div>
-            <div className="flex flex-row items-center justify-center gap-5 lg:gap-10 sm:gap-5">
-              {/* tailwind icon ---------------> */}
-              <div className="flex flex-col justify-center sm:gap-0 gap-1 items-center text-[#00acc1]">
-                <TailwindIcon className="skills-icon lg:w-20 sm:w-16 w-8 sm:border-b-4 border-b-2 border-[#5f989f]" />{" "}
-                <span className="lg:text-base sm:text-sm text-xs">
-                  TailwindCSS
-                </span>
+            {/* Right Section */}
+            <div className="box-section grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="box-1 relative bg-gray-100 dark:bg-[#111] p-6 rounded-xl shadow-lg h-[250px]">
+                <div className="text-teal-400 mb-4 relative h-1/2">
+                  <MongodbIcon className="absolute left-[5%] top-[40%] w-10 h-10" />
+                  <ExpressjsIcon className="absolute top-[5%] left-[40%] w-10 h-10" />
+                  <ReactIcon className="absolute right-[5%] top-[40%] w-10 h-10" />
+                  <NodejsIcon className="absolute top-[65%] left-[40%] w-10 h-10" />
+                </div>
+                <h3 className="sm:text-xl text-md font-semibold mb-2 dark:text-white">Mern Stack</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                  Builds modern, fast, and scalable web applications.{" "}
+                </p>
+                {/* bottom glow  */}
+                <div className="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-t dark:from-[#88ffe52e] from-[#88ffe563] to-transparent rounded-xl"></div>
               </div>
-              {/* bootstrap icon ---------------> */}
-              <div className="flex flex-col justify-center sm:gap-0 gap-1 items-center text-[#6c19ff]">
-                <BootstrapIcon className="skills-icon lg:w-20 sm:w-16 w-8 sm:border-b-4 border-b-2 border-[#6c19ff]" />{" "}
-                <span className="lg:text-base sm:text-sm text-xs">
-                  BootStrap
-                </span>
+              <div className="box-2 relative bg-gray-100 dark:bg-[#111] p-6 rounded-xl shadow-lg h-[250px]">
+                <div className="text-teal-400 mb-4 relative h-1/2">
+                  <TailwindIcon className="absolute left-[5%] top-[40%] w-10 h-10" />
+                  <BootstrapIcon className="absolute top-[5%] left-[40%] w-10 h-10" />
+                  <MaterialUIIcon className="absolute right-[5%] top-[40%] w-10 h-10" />
+                  <NextjsIcon className="absolute top-[65%] left-[40%] w-10 h-10 dark:text-white" />
+                </div>
+                <h3 className="sm:text-xl text-md font-semibold mb-2 dark:text-white">Frameworks</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                  Enhancing web apps with modern, responsive, and scalable UI
+                  frameworks.
+                </p>
+                 {/* bottom glow  */}
+                <div className="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-t dark:from-[#88ffe52e] from-[#88ffe563] to-transparent rounded-xl sm:hidden block"></div>
               </div>
-              {/* materialui icon ---------------> */}
-              <div className="flex flex-col justify-center sm:gap-0 gap-1 items-center text-[#29b6f6]">
-                <MaterialUIIcon className="skills-icon lg:w-20 sm:w-16 w-8 sm:border-b-4 border-b-2 border-[#29b6f6]" />{" "}
-                <span className="lg:text-base sm:text-sm text-xs">
-                  MaterialUI
-                </span>
+              <div className="box-3 relative bg-gray-100 dark:bg-[#111] p-6 rounded-xl shadow-lg h-[250px]">
+                <div className="text-teal-400 mb-4 relative h-2/5">
+                  <HTMLIcon className="absolute -left-[7px] top-[25px] w-10 h-10" />
+                  <CSSIcon className="absolute -top-[13px] left-[55px] w-10 h-10" />
+                  <JavascriptIcon className="absolute right-[10px] -top-[10px] w-10 h-10" />
+                  <ReduxIcon className="absolute top-[60px] left-[123px] w-10 h-10" />
+                  <GithubIcon className="absolute top-0 right-20 w-10 h-10" />
+                  <GSAPIcon className="absolute top-[50px] left-[40px] w-10 h-10" />
+                  <APIIcon className="absolute top-[60px] right-[10px] w-10 h-10 dark:text-white text-black rounded-full bg-black p-1" />
+                </div>
+                <h3 className="sm:text-xl text-md font-semibold mb-2 dark:text-white">Other Skills</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                  Proficient in HTML, CSS, JavaScript, GitHub, Redux, APIs, and
+                  more for complete web solutions.
+                </p>
+                  {/* bottom glow  */}
+                <div className="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-t dark:from-[#88ffe52e] from-[#88ffe563] to-transparent rounded-xl sm:hidden block"></div>
               </div>
-            </div>
-          </section>
-
-          {/* other skills icons ---------------------> */}
-          <section className="font-josefin flex flex-col sm:flex-row items-center justify-center sm:gap-5 gap-2">
-            <h3 className="text-center lg:text-xl sm:text-base text-sm py-2 whitespace-nowrap dark:text-white">
-              OTHER SKILLS
-            </h3>
-            {/* divider div -----------> */}
-            <div className="sm:h-14 h-[1px] bg-black sm:w-[1px] w-40 dark:bg-white"></div>
-            <div className="flex flex-row md:flex-nowrap flex-wrap items-center justify-center gap-5 lg:gap-10 sm:gap-5">
-              {/* html icon ---------------> */}
-              <div className="flex flex-col justify-center sm:gap-0 gap-1 items-center text-[#e7a42b]">
-                <HTMLIcon className="skills-icon sm:p-0 p-1 lg:w-20 sm:w-16 w-8 sm:border-b-4 border-b-2 border-[#e7a42b]" />{" "}
-                <span className="lg:text-base sm:text-sm text-xs">HTML</span>
-              </div>
-              {/* css icon ---------------> */}
-              <div className="flex flex-col justify-center sm:gap-0 gap-1 items-center text-[#0277BD]">
-                <CSSIcon className="skills-icon sm:p-0 p-1 lg:w-20 sm:w-16 w-8 sm:border-b-4 border-b-2 border-[#0277BD]" />{" "}
-                <span className="lg:text-base sm:text-sm text-xs">CSS</span>
-              </div>
-              {/* js icon ---------------> */}
-              <div className="flex flex-col justify-center sm:gap-0 gap-1 items-center text-[#ffd600]">
-                <JavascriptIcon className="skills-icon sm:p-0 p-1 lg:w-20 sm:w-16 w-8 sm:border-b-4 border-b-2 border-[#ffd600]" />{" "}
-                <span className="lg:text-base sm:text-sm text-xs">
-                  JavaScript
-                </span>
-              </div>
-              {/* redux icon ---------------> */}
-              <div className="flex flex-col justify-center sm:gap-0 gap-1 items-center">
-                <ReduxIcon className="skills-icon sm:p-0 p-1 lg:w-20 sm:w-16 w-8 sm:border-b-4 border-b-2 border-black dark:border-white dark:text-white" />{" "}
-                <span className="lg:text-base sm:text-sm text-xs dark:text-white">
-                  Redux-Saga
-                </span>
-              </div>
-              {/* github icon ---------------> */}
-              <div className="flex flex-col justify-center sm:gap-0 gap-1 items-center">
-                <GithubIcon className="skills-icon sm:p-0 p-1 lg:w-20 sm:w-16 w-8 sm:border-b-4 border-b-2 border-black dark:border-white dark:text-white" />{" "}
-                <span className="lg:text-base sm:text-sm text-xs dark:text-white">
-                  Github
-                </span>
-              </div>
-              {/* api icon ---------------> */}
-              <div className="flex flex-col justify-center sm:gap-0 gap-1 items-center">
-                <APIIcon className="skills-icon sm:p-0 p-1 lg:w-20 sm:w-16 w-8 sm:border-b-4 border-b-2 border-black dark:border-white dark:text-white" />{" "}
-                <span className="lg:text-base sm:text-sm text-xs whitespace-nowrap dark:text-white">
-                  REST-API
-                </span>
-              </div>
-              {/* gsap icon ---------------> */}
-              <div className="flex flex-col justify-center sm:gap-0 gap-1 items-center text-[#52d654]">
-                <GSAPIcon className="skills-icon sm:p-0 p-1 lg:w-[75px] sm:w-16 w-8 sm:border-b-4 border-b-2 border-[#52d654]" />{" "}
-                <span className="lg:text-base sm:text-sm text-xs">GSAP</span>
+              <div className="box-4 relative bg-gray-100 dark:bg-[#111] p-6 rounded-xl shadow-lg h-[250px]">
+                <div className="text-teal-400 mb-4 relative h-2/5">
+                  <VsCodeIcon className="absolute left-[5%] top-[40%] w-10 h-10" />
+                  <PostmanIcon className="absolute top-[5%] left-[40%] w-10 h-10" />
+                  <NetlifyIcon className="absolute right-[5%] top-[40%] w-10 h-10" />
+                  <VercleIcon className="absolute top-[65%] left-[40%] w-8 h-8 dark:text-white text-black" />
+                </div>
+                <h3 className="sm:text-xl text-md font-semibold mb-2 dark:text-white">Tools</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                  Experienced with VS Code, Postman, Vercel, and other modern
+                  development tools.
+                </p>
+                <div className="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-t dark:from-[#88ffe52e] from-[#88ffe563] to-transparent rounded-xl"></div>
               </div>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
     </>
   );

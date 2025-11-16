@@ -1,59 +1,103 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ExperienceIcon from "../Icons/icon-experience.svg?react";
+import CalvemLogo from "../Icons/logo-calvem.svg?react";
 
 export default function Experience() {
   // GSAP Animation -------------------------->
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(useGSAP);
+   const tl = gsap.timeline();
   useGSAP(() => {
-    gsap.from(".ex-box1", {
-      duration: 2,
-      x: -80,
+    tl.from(".ex-box", {
+      duration: 1,
+      y: 50,
       opacity: 0,
-      stagger: 0.5,
+      stagger: 0.2,
       scrollTrigger: {
-        trigger: ".ex-box1",
+        trigger: ".ex-box",
         scroller: "body",
         scrub: 1.5,
         start: "top 85%",
         end: "top 30%",
-      },
-    });
-    gsap.from(".ex-box2", {
-      duration: 2,
-      x: 80,
-      opacity: 0,
-      stagger: 0.5,
-      scrollTrigger: {
-        trigger: ".ex-box2",
-        scroller: "body",
-        scrub: 1.5,
-        start: "top 85%",
-        end: "top 30%",
-      },
+      }
     });
   });
   return (
     <>
-      <div className="max-w-7xl m-auto font-josefin p-2">
-        <div className="flex sm:flex-row flex-col items-center justify-evenly border border-black rounded-xl lg:px-4 py-20 sm:gap-0 gap-5 dark:border-white overflow-hidden">
-          {/* Calvem --------------> */}
-          <section className="ex-box1 lg:max-w-[430px] sm:max-w-[40vw] max-w-[80vw] lg:max-h-64 sm:h-[300px]  rounded-xl p-4 shadow-[inset_0_4px_10px_rgba(0,100,255,0.5)] dark:text-white dark:shadow-[inset_0_4px_10px_rgba(255,253,0,0.5)]">
-            <ExperienceIcon className="lg:w-12 sm:w-14 w-10 my-2" />
-            <h2 className="text-xl font-semibold">Calvem Energy Pvt. Ltd.</h2>
-            <span className="text-sm">Apr 2023 - Apr 2024</span>
-            <p>Intren as a Testing Engineer in electronics field</p>
-          </section>
-          {/* CollegeDekho.com --------------> */}
-          <section className="ex-box2 lg:max-w-[430px] sm:max-w-[40vw] max-w-[80vw] lg:max-h-64 sm:h-[300px] rounded-xl p-4 shadow-[inset_0_4px_10px_rgba(0,100,255,0.5)] dark:text-white dark:shadow-[inset_0_4px_10px_rgba(255,253,0,0.5)]">
-            <ExperienceIcon className="lg:w-12 sm:w-14 w-10 my-2" />
-            <h2 className="text-xl font-semibold">CollegeDekho.com</h2>
-            <span className="text-sm">Jan 2025 - Present</span>
-            <p>Intren as a Front-end Developer (HTML, CSS, JS)</p>
-          </section>
-        </div>
+      <div className="font-josefin p-2">
+        <section className="max-w-7xl m-auto py-16 px-6 md:px-16">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div>
+              <p className="ex-box text-[#56c1a8] font-semibold uppercase tracking-wide sm:text-base text-sm">
+                Experience
+              </p>
+              <h2 className="ex-box sm:text-4xl text-2xl font-bold mt-2 mb-4 text-black dark:text-white">
+                My <span className="text-[#56c1a8]">Professional</span> Journey
+              </h2>
+              <p className="ex-box dark:text-white mb-6 sm:text-base text-sm">
+                A quick look at my professional background and work experiences.
+              </p>
+
+              <div className="max-w-4xl mx-auto space-y-6">
+                <div className="ex-box dark:bg-[#141c2b] dark:text-white rounded-2xl p-6 flex items-start gap-4 shadow-lg dark:shadow-[#88ffe563] ">
+                  {/* Step Number */}
+                  <div className="text-teal-400 font-bold text-sm">1</div>
+
+                  {/* Content */}
+                  <div>
+                    <div className="flex sm:flex-row flex-col sm:items-center gap-3 mb-2">
+                      <img
+                        className="w-20"
+                        src="./images/cd-logo.png"
+                        alt="logo..."
+                      />
+                      <div>
+                        <h3 className="sm:text-xl text-lg font-semibold">
+                          CollegeDekho.com
+                        </h3>
+                        <span className="text-[#56c1a8]">2025 - Present</span>
+                      </div>
+                    </div>
+                    <p className="dark:text-white text-sm leading-relaxed">
+                      Intren as a Front-end Developer (HTML, CSS, JS)
+                    </p>
+                  </div>
+                </div>
+                <div className="ex-box dark:bg-[#141c2b] dark:text-white rounded-2xl p-6 flex items-start gap-4 shadow-lg dark:shadow-[#88ffe563]">
+                  {/* Step Number */}
+                  <div className="text-teal-400 font-bold text-sm">2</div>
+
+                  {/* Content */}
+                  <div>
+                    <div className="flex sm:flex-row flex-col sm:items-center gap-3 mb-2">
+                      <CalvemLogo className="dark:text-white w-10" />
+                      <div>
+                        <h3 className="sm:text-xl text-lg font-semibold">
+                          Calvem Energy Pvt. Ltd.
+                        </h3>
+                        <span className="text-[#56c1a8]">2023 - 2024</span>
+                      </div>
+                    </div>
+                    <p className="dark:text-white text-sm leading-relaxed">
+                      Intren as a Testing Engineer in electronics field.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Image */}
+            <div className="justify-center md:flex hidden">
+              <img
+                src="./images/experience-img.png" // replace with your image
+                alt="Education"
+                className="rounded-lg object-cover w-80"
+              />
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );

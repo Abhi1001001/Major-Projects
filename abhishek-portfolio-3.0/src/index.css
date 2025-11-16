@@ -1,3 +1,117 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.event-section {
+  position: relative;
+  background: linear-gradient(to bottom, #0a0d14, #0a0d14d0),
+    url("https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80")
+      no-repeat center/cover;
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  overflow: hidden;
+}
+
+.event-title {
+  font-size: 1rem;
+  color: #00d9ff;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.event-subtitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+/* Lessons wrapper */
+.lessons {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  position: relative;
+}
+
+/* Each lesson card */
+.lesson {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 700px;
+  background: rgba(15, 20, 30, 0.7);
+  border: 1px solid rgba(0, 217, 255, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.lesson:hover {
+  box-shadow: 0 0 25px rgba(0, 217, 255, 0.7);
+  transform: translateY(-5px);
+}
+
+/* Alternating positions */
+.lesson.left {
+  margin-right: auto;
+}
+
+.lesson.right {
+  margin-left: auto;
+}
+
+.lesson-img {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lesson-text {
+  padding: 1.5rem;
+  text-align: left;
+  width: 60%;
+}
+
+.lesson-text h3 {
+  color: #00d9ff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.lesson-text h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.lesson-text p {
+  font-size: 0.95rem;
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .lesson {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .lesson-img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .lesson-text {
+    width: 100%;
+    text-align: left;
+  }
+}

@@ -7,7 +7,21 @@ export default function Projects() {
   // GSAP Animation -------------------------->gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(useGSAP);
   gsap.registerPlugin(ScrollTrigger);
+  const tl = gsap.timeline();
   useGSAP(() => {
+    tl.from(".pro-text", {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".pro-text",
+        scroller: "body",
+        scrub: 1.5,
+        start: "top 85%",
+        end: "top 30%",
+      },
+    });
     gsap.from(".pro1-slide-left", {
       duration: 2,
       x: -80,
@@ -112,12 +126,51 @@ export default function Projects() {
         end: "top 30%",
       },
     });
+    gsap.from(".pro5-slide-left", {
+      duration: 2,
+      x: -80,
+      opacity: 0,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".pro5-slide-left",
+        scroller: "body",
+        scrub: 1.5,
+        start: "top 85%",
+        end: "top 30%",
+      },
+    });
+    gsap.from(".pro5-slide-right", {
+      duration: 2,
+      x: 80,
+      opacity: 0,
+      stagger: 0.5,
+      scrollTrigger: {
+        trigger: ".pro5-slide-right",
+        scroller: "body",
+        scrub: 1.5,
+        start: "top 85%",
+        end: "top 30%",
+      },
+    });
   });
 
   return (
     <>
-      <div className="max-w-7xl m-auto font-josefin p-2">
-        <div className="projects border border-black rounded-xl py-5 dark:border-white">
+      <div className="max-w-7xl m-auto font-josefin p-2 dark:bg-[#0c0c0c">
+        <div className="projects py-5 dark:border-white">
+          <div>
+            <p className="pro-text text-teal-400 font-semibold uppercase tracking-wide">
+              ABOUT MY WORK
+            </p>
+            <h2 className="pro-text text-4xl font-bold mt-2 mb-4 text-black dark:text-white">
+              My <span className="text-teal-400">Project</span> Showcase
+            </h2>
+            <p className="pro-text text-lg dark:text-white mb-6">
+              Here’s a collection of the projects I’ve built, highlighting my
+              skills, creativity, and problem-solving through real-world
+              applications.
+            </p>
+          </div>
           {/* user management project -------------> */}
           <section className="flex lg:flex-row flex-col py-4 overflow-hidden">
             {/* image section ----------------> */}
@@ -157,7 +210,7 @@ export default function Projects() {
                 </span>
               </div>
               <a href="https://user00management.netlify.app/" target="_blank">
-                <button className="rounded-full sm:px-3 px-2 sm:py-2 py-1 mt-2 duration-300 ease-in-out text-white flex bg-blue-600 active:scale-110 active:duration-0 hover:bg-blue-500 sm:text-base text-sm items-center">
+                <button className="rounded-full sm:px-3 px-2 sm:py-2 py-1 mt-2 duration-300 ease-in-out text-white flex bg-[#59d0b4] active:scale-110 active:duration-0 hover:bg-[#56c1a8] sm:text-base text-sm items-center">
                   Check live
                   <EnterIcon />
                 </button>
@@ -167,43 +220,36 @@ export default function Projects() {
 
           <div className="h-[0.5px] bg-black mx-3 dark:bg-white"></div>
 
-          {/* e-comm project --------------->  */}
+          {/* freshcart project --------------->  */}
           <section className="flex lg:flex-row-reverse flex-col py-4 overflow-hidden">
             {/* image section ----------------> */}
             <img
               className="pro2-slide-right lg:max-w-72 max-w-64 lg:mx-5 object-contain m-auto"
-              src="./images/e-comm.png"
+              src="./images/freshcart.png"
               alt="loading....."
             />
             <div className="bg-black lg:w-[1px] sm:w-[430px] w-[300px] lg:h-auto h-[1px] m-auto lg:my-0 my-4 dark:bg-white"></div>
             {/* text section ------------------> */}
             <div className="pro2-slide-left sm:px-10 px-5 dark:text-white">
-              <h3 className="sm:text-xl text-lg font-semibold">E-comm</h3>
+              <h3 className="sm:text-xl text-lg font-semibold">Freshcart</h3>
               <p className="sm:text-sm text-xs">
-                A e-commerce website (Frontend & Backend)
+                A Freshcart website (Frontend)
               </p>
               <p className="sm:text-base text-sm text-justify">
-                I'm building a fully responsive e-commerce website designed to
-                deliver a commercial-grade shopping experience. This application
-                is structured with React functional components, State Management
-                with Redux and Redux-Saga, Node.js and Express.js, MongoDB for
-                Database Management, Custom API Integration, Interactive UI with
-                SwiperJS for Carousel Display, Navigation and Routing with React
-                Router DOM, Styling with NextUI for a Modern, Responsive Layout,
-                Responsive and Realistic E-Commerce Features.
+                This is a fully responsive grocery store website built using
+                HTML, CSS, JavaScript, and styled with Tailwind CSS. The design
+                is clean and modern, optimized for all screen sizes from mobile
+                to desktop. Freshcart features a visually appealing layout,
+                interactive elements, and user-friendly navigation. It is still
+                a work in progress, with ongoing enhancements planned for
+                functionality and design improvements.
               </p>
               <div className="flex flex-wrap gap-4 mb-4 mt-2">
                 <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
-                  #ReactJS
+                  #HTML
                 </span>
                 <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
-                  #Node
-                </span>
-                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
-                  #Mongodb
-                </span>
-                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
-                  #ExpressJS
+                  #CSS
                 </span>
                 <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
                   #TailwindCSS
@@ -211,12 +257,9 @@ export default function Projects() {
                 <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
                   #SwiperJS
                 </span>
-                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
-                  #Redux
-                </span>
               </div>
-              <a href="https://our-e-comm.netlify.app/">
-                <button className="rounded-full sm:px-3 px-2 sm:py-2 py-1 mt-2 duration-300 ease-in-out text-white flex bg-blue-600 active:scale-110 active:duration-0 hover:bg-blue-500 sm:text-base text-sm items-center">
+              <a href="https://abhi1001001.github.io/Basic-Projects/Freshcart/">
+                <button className="rounded-full sm:px-3 px-2 sm:py-2 py-1 mt-2 duration-300 ease-in-out text-white flex bg-[#59d0b4] active:scale-110 active:duration-0 hover:bg-[#56c1a8] sm:text-base text-sm items-center">
                   Check live
                   <EnterIcon />
                 </button>
@@ -271,7 +314,7 @@ export default function Projects() {
                 href="https://abhishek-vishwakarma.netlify.app/"
                 target="_blank"
               >
-                <button className="rounded-full sm:px-3 px-2 sm:py-2 py-1 mt-2 duration-300 ease-in-out text-white flex bg-blue-600 active:scale-110 active:duration-0 hover:bg-blue-500 sm:text-base text-sm items-center">
+                <button className="rounded-full sm:px-3 px-2 sm:py-2 py-1 mt-2 duration-300 ease-in-out text-white flex bg-[#59d0b4] active:scale-110 active:duration-0 hover:bg-[#56c1a8] sm:text-base text-sm items-center">
                   Check live
                   <EnterIcon />
                 </button>
@@ -317,7 +360,54 @@ export default function Projects() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="rounded-full sm:px-3 px-2 sm:py-2 py-1 mt-2 duration-300 ease-in-out text-white flex bg-blue-600 active:scale-110 active:duration-0 hover:bg-blue-500 sm:text-base text-sm items-center">
+                <button className="rounded-full sm:px-3 px-2 sm:py-2 py-1 mt-2 duration-300 ease-in-out text-white flex bg-[#59d0b4] active:scale-110 active:duration-0 hover:bg-[#56c1a8] sm:text-base text-sm items-center">
+                  Check live
+                  <EnterIcon />
+                </button>
+              </a>
+            </div>
+          </section>
+
+          <div className="h-[1px] bg-black mx-3 dark:bg-white"></div>
+
+          {/* pdf-viewer project -------------> */}
+          <section className="flex lg:flex-row flex-col py-4 overflow-hidden">
+            {/* image section ----------------> */}
+            <img
+              className="pro5-slide-left lg:max-w-72 max-w-64 lg:mx-5 object-contain m-auto"
+              src="./images/pdf-reader.png"
+              alt="loading....."
+            />
+            <div className="bg-black lg:w-[1px] sm:w-[430px] w-[300px] lg:h-auto h-[1px] m-auto lg:my-0 my-4 dark:bg-white"></div>
+            {/* text section ------------------> */}
+            <div className="pro5-slide-right sm:px-10 px-5 dark:text-white">
+              <h3 className="sm:text-xl text-lg font-semibold">PDF - Reader</h3>
+              <p className="sm:text-sm text-xs">A pdf reader app (Frontend)</p>
+              <p className="sm:text-base text-sm text-justify">
+                This is a ReactJS-based PDF Viewer application that displays a
+                list of PDF documents fetched from a dummy API. Each PDF entry
+                shows a title, author, and published date in the UI. Users can
+                select and view any PDF file directly in the browser using a
+                built-in viewer. The app also includes a search functionality
+                that allows users to filter PDFs by title, author, or published
+                date in real-time for better accessibility.
+              </p>
+              <div className="flex flex-wrap gap-4 mb-4 mt-2">
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #ReactJS
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #JavaScript
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #Context-API
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #TailwindCSS
+                </span>
+              </div>
+              <a href="https://pdf-viewers.netlify.app/" target="_blank">
+                <button className="rounded-full sm:px-3 px-2 sm:py-2 py-1 mt-2 duration-300 ease-in-out text-white flex bg-[#59d0b4] active:scale-110 active:duration-0 hover:bg-[#56c1a8] sm:text-base text-sm items-center">
                   Check live
                   <EnterIcon />
                 </button>

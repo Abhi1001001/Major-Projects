@@ -25,26 +25,26 @@ export default function ContectUs() {
   const validateName = (user) => user.name.match(/[a-z]{3,}/i);
   const isInvalidName = useMemo(() => {
     return validateName(user) ? true : false;
-  }, [user.name]);
+  }, [user]);
 
   // //email validation --------------->
   const validateEmail = (user) =>
     user.email.match(/^[a-zA-Z0-9.]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i);
   const isInvalidEmail = useMemo(() => {
     return validateEmail(user) ? true : false;
-  }, [user.email]);
+  }, [user]);
 
   // //phone validation --------------->
   const validatePhone = (user) => user.phone.match(/[0-9]{10,}/);
   const isInvalidPhone = useMemo(() => {
     return validatePhone(user) ? true : false;
-  }, [user.phone]);
+  }, [user]);
 
   // //profile validation --------------->
   const validateProfile = (user) => user.profile.match(/[a-z]{3,}/i);
   const isInvalidProfile = useMemo(() => {
     return validateProfile(user) ? true : false;
-  }, [user.profile]);
+  }, [user]);
 
   // submit handler ---------------------->
   const handleSubmit = (event) => {
@@ -67,9 +67,9 @@ export default function ContectUs() {
 
   return (
     <>
-      <div className="max-w-7xl m-auto p-2 dark:bg-[#121212]">
-        <div className="border border-black rounded-xl px-4 py-20 flex justify-center items-start gap-4 dark:border-white">
-          <div className="lg:w-2/4 sm:w-3/4 w-[80vw] rounded-xl p-10 shadow-[inset_0_4px_20px_rgba(0,100,255,0.5)] dark:shadow-[inset_0_4px_20px_rgba(255,253,0,0.5)] font-josefin">
+      <div className="max-w-7xl m-auto p-2">
+        <div className="px-4 py-20 flex justify-center items-start gap-4 dark:border-white">
+          <div className="lg:w-2/4 sm:w-3/4 w-[80vw] rounded-xl p-10 shadow-lg dark:shadow-[#88ffe563] font-josefin">
             <form
               className="flex flex-col"
               action=""
@@ -117,7 +117,7 @@ export default function ContectUs() {
                 value={user.message}
               ></textarea>
               <button
-                className="rounded-full px-2 py-1 mt-8 duration-700 ease-in-out bg-blue-600 hover:bg-blue-500 text-white active:scale-105 active:duration-0"
+                className="rounded-full px-2 py-1 mt-8 duration-700 ease-in-out bg-[#59d0b4] hover:bg-[#4eb49d] text-white active:scale-105 active:duration-0"
                 type="submit"
               >
                 Submit

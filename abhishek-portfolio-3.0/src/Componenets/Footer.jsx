@@ -7,8 +7,8 @@ import MailIcon from "../Icons/icon-mail.svg?react";
 export default function Footer() {
   return (
     <>
-      <main className="w-[100vw] dark:bg-[#121212]">
-      <footer className="max-w-7xl m-auto dark:bg-[#121212] dark:text-white">
+      <main className="">
+      <footer className="max-w-7xl m-auto dark:text-white">
         <div className="flex flex-wrap justify-center items-center py-4 space-y-5">
           {/* text-----------------> */}
           <div className="flex flex-col font-inria text-xs">
@@ -24,9 +24,9 @@ export default function Footer() {
 
           {/* icons ---------------> */}  
           <div className="flex">
-          <MailIcon className="w-8 h-auto" />
-          <GithubIcon className="w-8 h-auto" />
-          <LinkedinIcon className="w-8 h-auto" />
+          <Link to="mailto:av159593@gmail.com"><MailIcon className="w-8 h-auto" /></Link>
+          <Link to="https://github.com/Abhi1001001"><GithubIcon className="w-8 h-auto" /></Link>
+          <Link to="https://www.linkedin.com/in/abhishek-vishwakarma-127b66227/"><LinkedinIcon className="w-8 h-auto" /></Link>
           </div>
 
           {/* line ---------------> */}
@@ -34,12 +34,12 @@ export default function Footer() {
           
           <form className="flex" action="">
             <input
-              className="bg-gray-200 px-2 rounded-full text-sm outline-none"
+              className="bg-gray-200 px-2 rounded-s-full text-sm outline-none"
               type="email"
               placeholder="Enter email"
             />
             <button
-              className="bg-blue-500 rounded-full px-2 py-1 text-white text-sm"
+              className="bg-[#59d0b4] rounded-e-full px-2 py-1 text-white text-sm"
               type="submit"
             >
               Subscribe
