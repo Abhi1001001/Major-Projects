@@ -5,50 +5,50 @@ import { useNavigate } from "react-router-dom";
 import { useUserContext } from "../Context/UserContext";
 
 export default function AddUser() {
-    const [addUserData, setAddUserData] = useState({
-      name : "",
-      username : "",
-      email : "",
-      phone : "",
-      address : {
-        street : "",
-        city : ""
-      },
-      company : "",
-      website : ""
-    });
-    const navigate = useNavigate();
-    // using context API data ----------------->
-    const userContext = useUserContext();
+  const [addUserData, setAddUserData] = useState({
+    name: "",
+    username: "",
+    email: "",
+    phone: "",
+    address: {
+      street: "",
+      city: "",
+    },
+    company: "",
+    website: "",
+  });
+  const navigate = useNavigate();
+  // using context API data ----------------->
+  const userContext = useUserContext();
 
-    // sending new user data ---------->
-    userContext.setNewUser(addUserData);
-    const sendData = (event) => {
-        let name = event.target.name;
-        let value = event.target.value;
-        if (name === "street" || name === "city") {
-          setAddUserData((old) => {
-            return {
-              ...old,
-              address: { ...old.address, [name]: value },
-            };
-          });
-        } else {
-          setAddUserData((old) => {
-            return {
-              ...old,
-              [name]: value,
-            };
-          });
-        }
-      };
-
-    // calling context API addUser function for add new user ------>
-    const postData = async (event) =>{
-        event.preventDefault();
-       await userContext.addUser();
-        await navigate('/')
+  // sending new user data ---------->
+  userContext.setNewUser(addUserData);
+  const sendData = (event) => {
+    let name = event.target.name;
+    let value = event.target.value;
+    if (name === "street" || name === "city") {
+      setAddUserData((old) => {
+        return {
+          ...old,
+          address: { ...old.address, [name]: value },
+        };
+      });
+    } else {
+      setAddUserData((old) => {
+        return {
+          ...old,
+          [name]: value,
+        };
+      });
     }
+  };
+
+  // calling context API addUser function for add new user ------>
+  const postData = async (event) => {
+    event.preventDefault();
+    await userContext.addUser();
+    await navigate("/");
+  };
   return (
     <>
       <main className="py-10">

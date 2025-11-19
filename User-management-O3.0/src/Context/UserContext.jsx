@@ -1,6 +1,5 @@
 import axios from "axios";
 import { createContext, useContext, useMemo, useState } from "react";
-import Loading from "../Components/Loading";
 
 // creating context --------------->
 export const UserContext = createContext(null);
@@ -13,8 +12,7 @@ export const useUserContext = () => {
 
 export default function UserContextProvider(props) {
   const [user, setUser] = useState([]);
-  // getting updated user data -------------->
-  const [updatedUser, setUpdatedUser] = useState();
+  const [viewedUser, setViewedUser] = useState({});
   // getting new user data --------------->
   const [newUser, setNewUser] = useState({
     name: "",
@@ -33,56 +31,51 @@ export default function UserContextProvider(props) {
   // spinner loading -------------->
   const [loading, setloading] = useState(true);
 
-  
   // validation ---------------------------------------->
   //name validation --------------->
   const validateName = (newUser) => newUser.name.match(/[a-z]{3,}/i);
   const isInvalidName = useMemo(() => {
     return validateName(newUser) ? false : true;
-  }, [newUser.name]);
- 
+  }, [newUser]);
+
   //Username validation --------------->
   const validateUsername = (newUser) => newUser.username.match(/[a-z]{3,}/i);
   const isInvalidUsername = useMemo(() => {
     return validateUsername(newUser) ? false : true;
-  }, [newUser.username]);
+  }, [newUser]);
 
   //email validation --------------->
   const validateEmail = (newUser) =>
     newUser.email.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
   const isInvalidMail = useMemo(() => {
     return validateEmail(newUser) ? false : true;
-  }, [newUser.email]);
+  }, [newUser]);
 
   //phone no. validation --------------->
   const validatePhone = (newUser) => newUser.phone.match(/^[0-9]{10}$/);
   const isInvalidPhone = useMemo(() => {
     return validatePhone(newUser) ? false : true;
-  }, [newUser.phone]); 
-   
+  }, [newUser]);
 
   //address(street) validation --------------->
   const validateStreet = (newUser) =>
     newUser.address.street.match(/[a-z]{1,}/i);
   const isInvalidStreet = useMemo(() => {
     return validateStreet(newUser) ? false : true;
-  }, [newUser.address.street]);
-  
+  }, [newUser]);
 
   //address(city) validation --------------->
   const validateCity = (newUser) => newUser.address.city.match(/[a-z]{1,}/i);
   const isInvalidCity = useMemo(() => {
     return validateCity(newUser) ? false : true;
-  }, [newUser.address.city]);
-  
+  }, [newUser]);
 
   //company validation --------------->
   const validateCompany = (newUser) => newUser.company.match(/[a-z]{3,}/i);
   const isInvalidCompany = useMemo(() => {
     if (newUser.company === "") return false;
     return validateCompany(newUser) ? false : true;
-  }, [newUser.company]);
-  
+  }, [newUser]);
 
   //website validation --------------->
   const validateWebsite = (newUser) =>
@@ -90,8 +83,7 @@ export default function UserContextProvider(props) {
   const isInvalidWebsite = useMemo(() => {
     if (newUser.website === "") return false;
     return validateWebsite(newUser) ? false : true;
-  }, [newUser.website]);
-  
+  }, [newUser]);
 
   // fetch data from api ------------>
   const fetchUsers = async () => {
@@ -103,11 +95,22 @@ export default function UserContextProvider(props) {
       .catch((error) => {
         alert(`${error.message} occurred please try again`);
       });
-      setloading(false);  
+    setloading(false);
+  };
+  const fetchSingleUser = async (userId) => {
+    await axios
+      .get(`https://jsonplaceholder.typicode.com/users/${userId}`)
+      .then((response) => {
+        setViewedUser(response.data);
+      })
+      .catch((error) => {
+        alert(`${error.message} occurred please try again`);
+      });
+    setloading(false);
   };
 
   // update data in api -------------->
-  const updateUser = async () => {
+  const updateUser = async (userId, updatedUser) => {
     await axios
       .put(`https://jsonplaceholder.typicode.com/users/${userId}`, updatedUser)
       .then((response) => {
@@ -140,7 +143,7 @@ export default function UserContextProvider(props) {
       !isInvalidCity &&
       !isInvalidCompany &&
       !isInvalidWebsite
-    ){
+    ) {
       await axios
         .post(`https://jsonplaceholder.typicode.com/users/`, newUser)
         .then((response) => {
@@ -160,9 +163,9 @@ export default function UserContextProvider(props) {
         .catch((error) => {
           alert(`${error.message} occurred please try again`);
         });
-      }else{
-        alert("please enter all valid details")
-      }
+    } else {
+      alert("please enter all valid details");
+    }
   };
 
   // delete data from api ------------>
@@ -178,20 +181,20 @@ export default function UserContextProvider(props) {
       });
   };
 
-
   return (
     <UserContext.Provider
       value={{
         fetchUsers,
+        fetchSingleUser,
         updateUser,
         addUser,
         deleteUser,
-        setUpdatedUser,
         setNewUser,
         setUserId,
         user,
+        viewedUser,
         userId,
-        loading
+        loading,
       }}
     >
       {props.children}

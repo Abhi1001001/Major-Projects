@@ -14,7 +14,7 @@ export default function UpdateUser() {
   const [updatedUserData, setUpdatedUserData] = useState(userContext.user[id-1]);
  
 // sending updated user data ---------->
-  userContext.setUpdatedUser(updatedUserData); 
+  // userContext.setUpdatedUser(updatedUserData); 
   const sendData = (event) => {
     let name = event.target.name;
     let value = event.target.value;
@@ -38,7 +38,7 @@ export default function UpdateUser() {
    // calling context API updateUser function for update user ------>
   const postData = async (event)=>{
     event.preventDefault();
-    await userContext.updateUser();
+    await userContext.updateUser(id, updatedUserData);
     await navigate('/')  
   }
   

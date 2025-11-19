@@ -9,11 +9,11 @@ export default function Home() {
   // using context API data ----------------->
   const userContext = useUserContext();
 
-  // send id to context API for update or delete perticuler user -------------->
+ // send id to context API for update or delete perticuler user -------------->
   const sendId = (id) => {
     userContext.setUserId(id);
   };
-
+  
   // calling context API deleteUser function for delete user ------>
   const deleteUser = () => {
     // a confirm box popup for confirmation ---------->
@@ -55,7 +55,6 @@ export default function Home() {
                   <td className="py-4 lg:px-8 md:px-4 px-2 flex">
                     <Link
                       // calling sendId function on onclick --------->
-                      onClick={() => sendId(user.id)}
                       className="cursor-pointer flex-shrink-0"
                       // sending id in url ---------->
                       to={`/update-user/${user.id}`}
@@ -76,9 +75,8 @@ export default function Home() {
 
                     <Link
                       // calling sendId function on onclick --------->
-                      onClick={() => sendId(user.id)}
                       className="cursor-pointer flex-shrink-0"
-                      to="/view-user"
+                      to={`/user-detail/${user.id}`}
                     >
                       <img src="./icons/icon-view.svg" alt="loading..." />
                     </Link>
