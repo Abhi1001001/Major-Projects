@@ -57,7 +57,7 @@ export default function Experience() {
                         <h3 className="sm:text-xl text-lg font-semibold">
                           CollegeDekho.com
                         </h3>
-                        <span className="text-[#56c1a8]">2025 - Present</span>
+                        <span className="text-[#56c1a8]">Jan 2025 - Jul 2025</span>
                       </div>
                     </div>
                     <p className="dark:text-white text-sm leading-relaxed">
@@ -77,7 +77,7 @@ export default function Experience() {
                         <h3 className="sm:text-xl text-lg font-semibold">
                           Calvem Energy Pvt. Ltd.
                         </h3>
-                        <span className="text-[#56c1a8]">2023 - 2024</span>
+                        <span className="text-[#56c1a8]">Apr 2023 - Apr 2024</span>
                       </div>
                     </div>
                     <p className="dark:text-white text-sm leading-relaxed">

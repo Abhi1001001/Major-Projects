@@ -220,45 +220,70 @@ export default function Projects() {
 
           <div className="h-[0.5px] bg-black mx-3 dark:bg-white"></div>
 
-          {/* freshcart project --------------->  */}
+          {/* task management app project --------------->  */}
           <section className="flex lg:flex-row-reverse flex-col py-4 overflow-hidden">
             {/* image section ----------------> */}
             <img
               className="pro2-slide-right lg:max-w-72 max-w-64 lg:mx-5 object-contain m-auto"
-              src="./images/freshcart.png"
+              src="./images/task-management.png"
               alt="loading....."
             />
             <div className="bg-black lg:w-[1px] sm:w-[430px] w-[300px] lg:h-auto h-[1px] m-auto lg:my-0 my-4 dark:bg-white"></div>
             {/* text section ------------------> */}
             <div className="pro2-slide-left sm:px-10 px-5 dark:text-white">
-              <h3 className="sm:text-xl text-lg font-semibold">Freshcart</h3>
+              <h3 className="sm:text-xl text-lg font-semibold">
+                Task Management
+              </h3>
               <p className="sm:text-sm text-xs">
-                A Freshcart website (Frontend)
+                A Task Management App (Frontend & Backend)
               </p>
               <p className="sm:text-base text-sm text-justify">
-                This is a fully responsive grocery store website built using
-                HTML, CSS, JavaScript, and styled with Tailwind CSS. The design
-                is clean and modern, optimized for all screen sizes from mobile
-                to desktop. Freshcart features a visually appealing layout,
-                interactive elements, and user-friendly navigation. It is still
-                a work in progress, with ongoing enhancements planned for
-                functionality and design improvements.
+                I built a full stack task manager with user authentication,
+                password reset, and complete task CRUD. Users can add, edit,
+                delete, and mark tasks as done. The app has secure login with
+                JWT and bcrypt, plus a reset link for forgotten passwords. The
+                frontend uses React, TypeScript, Vite, Tailwind, Zustand, React
+                Query, Zod, and React Hook Form. The backend is built with Node,
+                Express, MongoDB, and Mongoose. It also logs errors for
+                debugging. The project shows how I handle real-world flows like
+                validation, API state, and secure auth.
               </p>
               <div className="flex flex-wrap gap-4 mb-4 mt-2">
                 <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
-                  #HTML
+                  #ReactJS
                 </span>
                 <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
-                  #CSS
+                  #NodeJS
                 </span>
                 <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
                   #TailwindCSS
                 </span>
                 <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
-                  #SwiperJS
+                  #TypeScript
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #MongoDB
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #Express
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #react-query
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #zod
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #zustand
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #JWT
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #react-hook-form
                 </span>
               </div>
-              <a href="https://abhi1001001.github.io/Basic-Projects/Freshcart/">
+              <a href="https://to-do-app-min.netlify.app/" target="_blank">
                 <button className="rounded-full sm:px-3 px-2 sm:py-2 py-1 mt-2 duration-300 ease-in-out text-white flex bg-[#59d0b4] active:scale-110 active:duration-0 hover:bg-[#56c1a8] sm:text-base text-sm items-center">
                   Check live
                   <EnterIcon />

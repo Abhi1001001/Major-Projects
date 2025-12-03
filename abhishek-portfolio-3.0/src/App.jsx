@@ -19,7 +19,7 @@ export default function App() {
           <Route path="/experience" element={<Experience />} />
           <Route path="/education" element={<Education />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/contect-us" element={<ContectUs />} />
+          <Route path="/contact-us" element={<ContectUs />} />
         </Routes>
         <Footer />
       </BrowserRouter>
