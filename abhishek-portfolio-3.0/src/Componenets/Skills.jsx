@@ -131,7 +131,7 @@ export default function Skills() {
                 more interactive and modern.{" "}
               </p>
               <div className="skill-text">
-              <button className="bg-[#59d0b4] px-6 py-2 rounded-full text-white hover:bg-teal-400 transition">
+              <button className="bg-[#59d0b4] px-6 py-2 rounded-full text-white hover:bg-teal-400 transition active:scale-110 active:duration-0">
                 View All
               </button>
               </div>

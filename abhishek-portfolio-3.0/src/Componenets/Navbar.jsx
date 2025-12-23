@@ -90,8 +90,7 @@ export default function Navbar() {
   return (
     <>
       {/* navbar section ---------------------------> */}
-
-      <nav className="backdrop-blur-lg max-w-7xl m-auto flex justify-between items-center px-4 font-concert text-xl sticky top-0 dark:text-white">
+      <nav className="backdrop-blur-lg max-w-7xl m-auto flex justify-between items-center px-4 font-concert text-xl sticky top-0 dark:text-white z-50">
         <Link to="/" className="w-14 outline-none">
           <LogoIcon className="text-[#6ee5ce]" />
         </Link>
@@ -154,9 +153,10 @@ export default function Navbar() {
             </button>
           </div>
           {isMobileMenuOpen && (
-            <div className="w-1/2 fixed top-20 right-0 h-screen flex flex-col items-center justify-start space-y-8 text-2xl font-semibold z-50 dark:border-white bg-[#e3e3e3] dark:bg-[#121212]">
+            <div className="z-50 bg-amber-400 fixed top-14 right-0">
+              <div className="w-1/2 pt-5 h-screen flex flex-col items-center justify-start space-y-8 text-2xl font-semibold dark:border-white bg-[#e3e3e3] dark:bg-[#121212] ">
               <Link
-                to="/home"
+                to="/"
                 onClick={mobileMenuToggle}
                 className="hover:text-teal-400 cursor-pointer"
               >
@@ -197,6 +197,7 @@ export default function Navbar() {
               >
                 Contact Us
               </Link>
+            </div>
             </div>
           )}
         </div>
