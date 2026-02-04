@@ -158,7 +158,7 @@ export default function Projects() {
     <>
       <div className="max-w-7xl m-auto font-josefin p-2 dark:bg-[#0c0c0c">
         <div className="projects py-5 dark:border-white">
-          <div>
+          <div className="sm:px-10 px-5">
             <p className="pro-text text-teal-400 font-semibold uppercase tracking-wide">
               ABOUT MY WORK
             </p>
@@ -171,6 +171,73 @@ export default function Projects() {
               applications.
             </p>
           </div>
+
+          {/* ElectraZone app project --------------->  */}
+          <section className="flex lg:flex-row-reverse flex-col py-4 overflow-hidden">
+            {/* image section ----------------> */}
+            <img
+              className="pro2-slide-right lg:max-w-72 max-w-64 lg:mx-5 object-contain m-auto"
+              src="./images/electrazone.png"
+              alt="loading....."
+            />
+            <div className="bg-black lg:w-[1px] sm:w-[430px] w-[300px] lg:h-auto h-[1px] m-auto lg:my-0 my-4 dark:bg-white"></div>
+            {/* text section ------------------> */}
+            <div className="pro2-slide-left sm:px-10 px-5 dark:text-white">
+              <h3 className="sm:text-xl text-lg font-semibold">ElectraZone</h3>
+              <p className="sm:text-sm text-xs">
+                A Electronics Kart App (Frontend & Backend)
+              </p>
+              <p className="sm:text-base text-sm text-justify">
+                Developed ElectraZone, a full-stack electronics e-commerce app
+                with user/admin roles, authentication, email verification via
+                Nodemailer, profile image uploads using Multer and Cloudinary,
+                and product filtering and sorting. Built with React, ShadCN UI,
+                Tailwind, SwiperJS, Axios, Node.js, Express, MongoDB, JWT, and
+                bcrypt.
+              </p>
+              <div className="flex flex-wrap gap-4 mb-4 mt-2">
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #ReactJS
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #NodeJS
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #TailwindCSS
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #Javascript
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #MongoDB
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #Express
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #SwiperJS
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #ShadCN UI
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #Cloudinary
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #JWT
+                </span>
+              </div>
+              <a href="https://electrazone.netlify.app/" target="_blank">
+                <button className="rounded-full sm:px-3 px-2 sm:py-2 py-1 mt-2 duration-300 ease-in-out text-white flex bg-[#59d0b4] active:scale-110 active:duration-0 hover:bg-[#56c1a8] sm:text-base text-sm items-center">
+                  Check live
+                  <EnterIcon />
+                </button>
+              </a>
+            </div>
+          </section>
+
+          <div className="h-[0.5px] bg-black mx-3 dark:bg-white"></div>
+
           {/* user management project -------------> */}
           <section className="flex lg:flex-row flex-col py-4 overflow-hidden">
             {/* image section ----------------> */}
@@ -283,7 +350,7 @@ export default function Projects() {
                   #react-hook-form
                 </span>
               </div>
-              <a href="https://to-do-app-min.netlify.app/" target="_blank">
+              <a href="https://electrazone.netlify.app/" target="_blank">
                 <button className="rounded-full sm:px-3 px-2 sm:py-2 py-1 mt-2 duration-300 ease-in-out text-white flex bg-[#59d0b4] active:scale-110 active:duration-0 hover:bg-[#56c1a8] sm:text-base text-sm items-center">
                   Check live
                   <EnterIcon />
@@ -349,25 +416,28 @@ export default function Projects() {
 
           <div className="h-[1px] bg-black mx-3 dark:bg-white"></div>
 
-          {/*Quiz-App project --------------->  */}
+          {/*Freshcart project --------------->  */}
           <section className="flex lg:flex-row-reverse flex-col py-4 overflow-hidden">
             {/* image section ----------------> */}
             <img
               className="pro4-slide-right lg:max-w-72 max-w-64 lg:mx-5 object-contain m-auto"
-              src="./images/quiz-app.png"
+              src="./images/freshcart.png"
               alt="loading....."
             />
             <div className="bg-black lg:w-[1px] sm:w-[430px] w-[300px] lg:h-auto h-[1px] m-auto lg:my-0 my-4 dark:bg-white"></div>
             {/* text section ------------------> */}
             <div className="pro4-slide-left sm:px-10 px-5 dark:text-white">
-              <h3 className="sm:text-xl text-lg font-semibold">Quiz-App</h3>
-              <p className="sm:text-sm text-xs">A quiz app (Frontend)</p>
+              <h3 className="sm:text-xl text-lg font-semibold">Freshcart</h3>
+              <p className="sm:text-sm text-xs">An e-commerce app (Frontend)</p>
               <p className="sm:text-base text-sm text-justify">
-                I have developed a User Management System application using
-                React, Here user can Create, Read, and Delete operations on user
-                data. The application integrates with a Fake JSON Server API to
-                handle CRUD operations. The project use the Next UI framework
-                for modern, and responsive user interface.
+                FreshCart is a responsive e-commerce landing page built to
+                showcase a clean and user-friendly product listing experience.
+                The home page displays products in an organized layout optimized
+                for all screen sizes, while the login page provides a simple and
+                intuitive authentication interface. The project focuses on
+                responsive design, reusable UI components, and smooth user
+                interaction, making it a solid foundation for a modern
+                e-commerce application.
               </p>
               <div className="flex gap-4 mb-4 mt-2">
                 <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
@@ -379,9 +449,12 @@ export default function Projects() {
                 <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
                   #JavaScript
                 </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #TailwindCSS
+                </span>
               </div>
               <a
-                href="https://abhi1001001.github.io/Basic-Projects/Quiz-App/"
+                href="https://abhi1001001.github.io/Basic-Projects/Freshcart/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -432,6 +505,50 @@ export default function Projects() {
                 </span>
               </div>
               <a href="https://pdf-viewers.netlify.app/" target="_blank">
+                <button className="rounded-full sm:px-3 px-2 sm:py-2 py-1 mt-2 duration-300 ease-in-out text-white flex bg-[#59d0b4] active:scale-110 active:duration-0 hover:bg-[#56c1a8] sm:text-base text-sm items-center">
+                  Check live
+                  <EnterIcon />
+                </button>
+              </a>
+            </div>
+          </section>
+
+          {/*Quiz-App project --------------->  */}
+          <section className="flex lg:flex-row-reverse flex-col py-4 overflow-hidden">
+            {/* image section ----------------> */}
+            <img
+              className="pro4-slide-right lg:max-w-72 max-w-64 lg:mx-5 object-contain m-auto"
+              src="./images/quiz-app.png"
+              alt="loading....."
+            />
+            <div className="bg-black lg:w-[1px] sm:w-[430px] w-[300px] lg:h-auto h-[1px] m-auto lg:my-0 my-4 dark:bg-white"></div>
+            {/* text section ------------------> */}
+            <div className="pro4-slide-left sm:px-10 px-5 dark:text-white">
+              <h3 className="sm:text-xl text-lg font-semibold">Quiz-App</h3>
+              <p className="sm:text-sm text-xs">A quiz app (Frontend)</p>
+              <p className="sm:text-base text-sm text-justify">
+                I have developed a User Management System application using
+                React, Here user can Create, Read, and Delete operations on user
+                data. The application integrates with a Fake JSON Server API to
+                handle CRUD operations. The project use the Next UI framework
+                for modern, and responsive user interface.
+              </p>
+              <div className="flex gap-4 mb-4 mt-2">
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #HTML
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #CSS
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #JavaScript
+                </span>
+              </div>
+              <a
+                href="https://abhi1001001.github.io/Basic-Projects/Quiz-App/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button className="rounded-full sm:px-3 px-2 sm:py-2 py-1 mt-2 duration-300 ease-in-out text-white flex bg-[#59d0b4] active:scale-110 active:duration-0 hover:bg-[#56c1a8] sm:text-base text-sm items-center">
                   Check live
                   <EnterIcon />

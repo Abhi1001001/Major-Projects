@@ -17,17 +17,20 @@ import PostmanIcon from "../Icons/icon-postman.svg?react";
 import VsCodeIcon from "../Icons/icon-vscode.svg?react";
 import NetlifyIcon from "../Icons/icon-netlify.svg?react";
 import VercleIcon from "../Icons/icon-vercle.svg?react";
+import MySqlIcon from "../Icons/icon-sql.svg?react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useState } from "react";
 
 export default function Skills() {
+  const [open, setOpen] = useState(false);
   // GSAP Animation -------------------------->
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(useGSAP);
   const tl = gsap.timeline();
   useGSAP(() => {
-     tl.from(".skill-text", {
+    tl.from(".skill-text", {
       duration: 1,
       y: 50,
       opacity: 0,
@@ -38,7 +41,7 @@ export default function Skills() {
         scrub: 1.5,
         start: "top 85%",
         end: "top 30%",
-      }
+      },
     });
     gsap.from(".box-1", {
       duration: 0.5,
@@ -100,8 +103,8 @@ export default function Skills() {
   return (
     <>
       <div className="p-2 dark:bg-[#000000] font-josefin">
-        <section className=" py-5 px-6 md:px-16 overflow-hidden">
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <section className=" py-5 overflow-hidden">
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center sm:px-16 px-5">
             {/* Left Section */}
             <div>
               <p className="skill-text text-[#6ee5ce] font-semibold uppercase tracking-wide sm:text-md text-sm">
@@ -131,9 +134,9 @@ export default function Skills() {
                 more interactive and modern.{" "}
               </p>
               <div className="skill-text">
-              <button className="bg-[#59d0b4] px-6 py-2 rounded-full text-white hover:bg-teal-400 transition active:scale-110 active:duration-0">
-                View All
-              </button>
+                <button onClick={() => setOpen(true)} className="bg-[#59d0b4] px-6 py-2 rounded-full text-white hover:bg-teal-400 transition active:scale-110 active:duration-0">
+                  View All
+                </button>
               </div>
             </div>
 
@@ -146,7 +149,9 @@ export default function Skills() {
                   <ReactIcon className="absolute right-[5%] top-[40%] w-10 h-10" />
                   <NodejsIcon className="absolute top-[65%] left-[40%] w-10 h-10" />
                 </div>
-                <h3 className="sm:text-xl text-md font-semibold mb-2 dark:text-white">Mern Stack</h3>
+                <h3 className="sm:text-xl text-md font-semibold mb-2 dark:text-white">
+                  Mern Stack
+                </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
                   Builds modern, fast, and scalable web applications.{" "}
                 </p>
@@ -160,30 +165,35 @@ export default function Skills() {
                   <MaterialUIIcon className="absolute right-[5%] top-[40%] w-10 h-10" />
                   <NextjsIcon className="absolute top-[65%] left-[40%] w-10 h-10 dark:text-white" />
                 </div>
-                <h3 className="sm:text-xl text-md font-semibold mb-2 dark:text-white">Frameworks</h3>
+                <h3 className="sm:text-xl text-md font-semibold mb-2 dark:text-white">
+                  Frameworks
+                </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
                   Enhancing web apps with modern, responsive, and scalable UI
                   frameworks.
                 </p>
-                 {/* bottom glow  */}
+                {/* bottom glow  */}
                 <div className="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-t dark:from-[#88ffe52e] from-[#88ffe563] to-transparent rounded-xl sm:hidden block"></div>
               </div>
               <div className="box-3 relative bg-gray-100 dark:bg-[#111] p-6 rounded-xl shadow-lg h-[250px]">
                 <div className="text-teal-400 mb-4 relative h-2/5">
-                  <HTMLIcon className="absolute -left-[7px] top-[25px] w-10 h-10" />
+                  <MySqlIcon className="absolute -left-[7px] -top-[15px]  w-12 h-12" />
+                  <HTMLIcon className="absolute -left-[7px] top-[40px] w-10 h-10" />
                   <CSSIcon className="absolute -top-[13px] left-[55px] w-10 h-10" />
                   <JavascriptIcon className="absolute right-[10px] -top-[10px] w-10 h-10" />
                   <ReduxIcon className="absolute top-[60px] left-[123px] w-10 h-10" />
                   <GithubIcon className="absolute top-0 right-20 w-10 h-10" />
-                  <GSAPIcon className="absolute top-[50px] left-[40px] w-10 h-10" />
+                  <GSAPIcon className="absolute top-[50px] left-[50px] w-10 h-10" />
                   <APIIcon className="absolute top-[60px] right-[10px] w-10 h-10 dark:text-white text-black rounded-full bg-black p-1" />
                 </div>
-                <h3 className="sm:text-xl text-md font-semibold mb-2 dark:text-white">Other Skills</h3>
+                <h3 className="sm:text-xl text-md font-semibold mb-2 dark:text-white">
+                  Other Skills
+                </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
                   Proficient in HTML, CSS, JavaScript, GitHub, Redux, APIs, and
                   more for complete web solutions.
                 </p>
-                  {/* bottom glow  */}
+                {/* bottom glow  */}
                 <div className="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-t dark:from-[#88ffe52e] from-[#88ffe563] to-transparent rounded-xl sm:hidden block"></div>
               </div>
               <div className="box-4 relative bg-gray-100 dark:bg-[#111] p-6 rounded-xl shadow-lg h-[250px]">
@@ -193,7 +203,9 @@ export default function Skills() {
                   <NetlifyIcon className="absolute right-[5%] top-[40%] w-10 h-10" />
                   <VercleIcon className="absolute top-[65%] left-[40%] w-8 h-8 dark:text-white text-black" />
                 </div>
-                <h3 className="sm:text-xl text-md font-semibold mb-2 dark:text-white">Tools</h3>
+                <h3 className="sm:text-xl text-md font-semibold mb-2 dark:text-white">
+                  Tools
+                </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
                   Experienced with VS Code, Postman, Vercel, and other modern
                   development tools.
@@ -204,6 +216,78 @@ export default function Skills() {
           </div>
         </section>
       </div>
+
+      {/* Popup */}
+      {open && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          <div className="relative bg-white dark:bg-[#000000] dark:border-gray-700 dark:border-2 max-w-2xl w-full mx-4 rounded-2xl shadow-xl p-6 animate-scaleIn">
+            {/* Close */}
+            <button
+              onClick={() => setOpen(false)}
+              className="absolute top-4 right-5 text-gray-500 hover:text-black dark:hover:text-gray-300 text-xl"
+            >
+              ✕
+            </button>
+
+            <h2 className="text-2xl font-semibold mb-2">My Skills</h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              I build scalable, modern web applications with a strong focus on
+              performance, clean UI, and maintainable backend architecture.
+            </p>
+
+            <div className="grid sm:grid-cols-2 gap-5">
+              {/* MERN */}
+              <div className="rounded-xl border p-4 hover:shadow-md transition">
+                <h3 className="font-semibold mb-2 text-teal-500">MERN Stack</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  MongoDB, Express, React, Node.js for building fast, secure,
+                  and scalable full-stack applications.
+                </p>
+              </div>
+
+              {/* Frameworks */}
+              <div className="rounded-xl border p-4 hover:shadow-md transition">
+                <h3 className="font-semibold mb-2 text-purple-500">
+                  Frameworks & UI
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  React, Next.js, Tailwind CSS, Bootstrap, ShadCN UI, Material
+                  UI for responsive and modern interfaces.
+                </p>
+              </div>
+
+              {/* Other Skills */}
+              <div className="rounded-xl border p-4 hover:shadow-md transition">
+                <h3 className="font-semibold mb-2 text-blue-500">
+                  Other Skills
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  HTML, CSS, JavaScript, TypeScript, Redux, REST APIs,
+                  authentication, and database design.
+                </p>
+              </div>
+
+              {/* Tools */}
+              <div className="rounded-xl border p-4 hover:shadow-md transition">
+                <h3 className="font-semibold mb-2 text-orange-500">Tools</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  VS Code, GitHub, Postman, Vercel, Netlify, Cloudinary, and
+                  modern deployment workflows.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-6 flex justify-end">
+              <button
+                onClick={() => setOpen(false)}
+                className="px-5 py-2 rounded-lg bg-black dark:bg-gray-600 text-white text-sm hover:bg-gray-800 dark:hover:bg-gray-600"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

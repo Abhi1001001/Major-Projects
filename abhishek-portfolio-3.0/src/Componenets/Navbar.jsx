@@ -54,21 +54,13 @@ export default function Navbar() {
 
   // mobile menu toggle function ------->
   const mobileMenuToggle = () => {
-    // if (isMobileMenuOpen === false) setIsMobileMenuOpen(true);
-    // else setIsMobileMenuOpen(false);
-    // const mobileMenu = document.getElementById("mobile-menu");
-    // if (mobileMenu.style.display === "none") {
-    //   mobileMenu.style.display = "flex";
-    // } else {
-    //   mobileMenu.style.display = "none";
-    // }
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   // download pdf function------------------------>
   const downloadResume = () => {
     fetch(
-      "https://drive.google.com/file/d/1Bx4-VMPw54NfynMRRkVRcdhE-Upe8AwT/view?usp=sharing"
+      "https://drive.google.com/file/d/1yVXJbAUwdEd2XcFC7Mdmxo0iREP5Wjco/view?usp=drive_link"
     ).then((response) => {
       response.blob().then((blob) => {
         const fileURL = window.URL.createObjectURL(blob);
@@ -153,8 +145,8 @@ export default function Navbar() {
             </button>
           </div>
           {isMobileMenuOpen && (
-            <div className="z-50 bg-amber-400 fixed top-14 right-0">
-              <div className="w-1/2 pt-5 h-screen flex flex-col items-center justify-start space-y-8 text-2xl font-semibold dark:border-white bg-[#e3e3e3] dark:bg-[#121212] ">
+            <div className="w-1/2 z-50 dark:border-white bg-[#e3e3e3] dark:bg-[#121212] fixed top-14 right-0">
+              <div className=" pt-5 h-screen flex flex-col items-center justify-start space-y-8 text-2xl font-semibold">
               <Link
                 to="/"
                 onClick={mobileMenuToggle}
