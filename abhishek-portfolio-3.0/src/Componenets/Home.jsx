@@ -41,7 +41,7 @@ export default function Home() {
               </h2>
               <p className="hero-text text-justify lg:text-base sm:text-sm hidden sm:block dark:text-white">
                 I am a dedicated full-stack developer with a passion for
-                creating innovative digital solutions.I aim to contribute to a
+                creating innovative digital solutions. I aim to contribute to a
                 dynamic team, drive innovation, and continuously enhance my
                 expertise in front-end technologies. Eager to contribute to
                 projects that prioritize user experience and performance, while

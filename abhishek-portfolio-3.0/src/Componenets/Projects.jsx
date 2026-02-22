@@ -350,7 +350,7 @@ export default function Projects() {
                   #react-hook-form
                 </span>
               </div>
-              <a href="https://electrazone.netlify.app/" target="_blank">
+              <a href="https://to-do-app-min.netlify.app/" target="_blank">
                 <button className="rounded-full sm:px-3 px-2 sm:py-2 py-1 mt-2 duration-300 ease-in-out text-white flex bg-[#59d0b4] active:scale-110 active:duration-0 hover:bg-[#56c1a8] sm:text-base text-sm items-center">
                   Check live
                   <EnterIcon />
@@ -512,6 +512,8 @@ export default function Projects() {
               </a>
             </div>
           </section>
+
+          <div className="h-[0.5px] bg-black mx-3 dark:bg-white"></div>
 
           {/*Quiz-App project --------------->  */}
           <section className="flex lg:flex-row-reverse flex-col py-4 overflow-hidden">

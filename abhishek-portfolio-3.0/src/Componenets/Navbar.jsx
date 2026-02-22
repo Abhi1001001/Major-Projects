@@ -60,7 +60,7 @@ export default function Navbar() {
   // download pdf function------------------------>
   const downloadResume = () => {
     fetch(
-      "https://drive.google.com/file/d/1yVXJbAUwdEd2XcFC7Mdmxo0iREP5Wjco/view?usp=drive_link"
+      "https://drive.google.com/file/d/1o43PUTQUESo7AxGuarIK9EgVVVD02tD6/view?usp=sharing"
     ).then((response) => {
       response.blob().then((blob) => {
         const fileURL = window.URL.createObjectURL(blob);
