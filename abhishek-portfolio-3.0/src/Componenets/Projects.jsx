@@ -156,7 +156,7 @@ export default function Projects() {
 
   return (
     <>
-      <div className="max-w-7xl m-auto font-josefin p-2 dark:bg-[#0c0c0c">
+      <div className="max-w-7xl m-auto font-josefin p-2 dark:bg-[#0c0c0c]">
         <div className="projects py-5 dark:border-white">
           <div className="sm:px-10 px-5">
             <p className="pro-text text-teal-400 font-semibold uppercase tracking-wide">
@@ -243,40 +243,46 @@ export default function Projects() {
             {/* image section ----------------> */}
             <img
               className="pro1-slide-left g:max-w-72 max-w-64 lg:mx-5 object-contain m-auto"
-              src="./images/user-management.png"
+              src="./images/clove-dental.png"
               alt="loading....."
             />
             <div className="bg-black lg:w-[1px] sm:w-[430px] w-[300px] lg:h-auto h-[1px] m-auto lg:my-0 my-4 dark:bg-white"></div>
             {/* text section ------------------> */}
             <div className="pro1-slide-right sm:px-10 px-5 dark:text-white">
-              <h3 className="sm:text-xl text-lg font-semibold">
-                User Management
-              </h3>
+              <h3 className="sm:text-xl text-lg font-semibold">Clove Dental</h3>
               <p className="sm:text-sm text-xs">
-                User management application (Frontend)
+                A dentist landing page (Frontend)
               </p>
               <p className="sm:text-base text-sm text-justify">
-                I have developed a User Management System application using
-                React, Here user can Create, Read, and Delete operations on user
-                data. The application integrates with a Fake JSON Server API to
-                handle CRUD operations. The project use the Next UI framework
-                for modern, and responsive user interface.
+                I built a responsive dentist landing page where patients can
+                book appointments online. The website is created using HTML,
+                CSS, and JavaScript, with a clean and user-friendly design
+                suitable for a dental clinic. The appointment form includes
+                client-side validation to ensure correct user input. When a
+                patient submits the form, the details are sent directly to the
+                clinic’s email using Bravo, without requiring a backend server.
+                This project demonstrates my skills in frontend development,
+                responsive design, DOM manipulation, and third-party service
+                integration.
               </p>
               <div className="flex flex-wrap gap-4 mb-4 mt-2">
                 <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
-                  #ReactJS
+                  #HTML
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #CSS
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #JavaScript
                 </span>
                 <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
                   #API
                 </span>
-                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
-                  #TailwindCSS
-                </span>
-                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
-                  #Context-API
-                </span>
               </div>
-              <a href="https://user00management.netlify.app/" target="_blank">
+              <a
+                href="https://clove-dantal-sample.netlify.app/"
+                target="_blank"
+              >
                 <button className="rounded-full sm:px-3 px-2 sm:py-2 py-1 mt-2 duration-300 ease-in-out text-white flex bg-[#59d0b4] active:scale-110 active:duration-0 hover:bg-[#56c1a8] sm:text-base text-sm items-center">
                   Check live
                   <EnterIcon />
