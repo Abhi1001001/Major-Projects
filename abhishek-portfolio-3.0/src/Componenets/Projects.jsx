@@ -251,7 +251,7 @@ export default function Projects() {
             <div className="pro1-slide-right sm:px-10 px-5 dark:text-white">
               <h3 className="sm:text-xl text-lg font-semibold">Clove Dental</h3>
               <p className="sm:text-sm text-xs">
-                A dentist landing page (Frontend)
+                A dentist landing page (Frontend & Backend)
               </p>
               <p className="sm:text-base text-sm text-justify">
                 I built a responsive dentist landing page where patients can
