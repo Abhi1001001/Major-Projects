@@ -238,7 +238,7 @@ export default function Projects() {
 
           <div className="h-[0.5px] bg-black mx-3 dark:bg-white"></div>
 
-          {/* user management project -------------> */}
+          {/* clove dental project -------------> */}
           <section className="flex lg:flex-row flex-col py-4 overflow-hidden">
             {/* image section ----------------> */}
             <img
@@ -255,15 +255,16 @@ export default function Projects() {
               </p>
               <p className="sm:text-base text-sm text-justify">
                 I built a responsive dentist landing page where patients can
-                book appointments online. The website is created using HTML,
-                CSS, and JavaScript, with a clean and user-friendly design
-                suitable for a dental clinic. The appointment form includes
-                client-side validation to ensure correct user input. When a
-                patient submits the form, the details are sent directly to the
-                clinic’s email using Bravo, without requiring a backend server.
-                This project demonstrates my skills in frontend development,
-                responsive design, DOM manipulation, and third-party service
-                integration.
+                book appointments online. The frontend is developed using HTML,
+                CSS, and JavaScript with a clean and user-friendly design
+                suitable for a dental clinic. I implemented a backend using
+                Node.js and Express to handle appointment requests securely.
+                When a patient submits the form, the data is sent to the backend
+                API, validated, and stored in MongoDB using Mongoose. After
+                saving the appointment details in the database, an email
+                notification is sent to the clinic. This project demonstrates my
+                skills in full-stack development, REST API creation, database
+                integration, form validation, and email service integration.
               </p>
               <div className="flex flex-wrap gap-4 mb-4 mt-2">
                 <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
@@ -278,11 +279,17 @@ export default function Projects() {
                 <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
                   #API
                 </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #NodeJS
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #Express
+                </span>
+                <span className="border-2 border-black rounded-full px-2 py-1 text-xs dark:border-white">
+                  #MongoDB
+                </span>
               </div>
-              <a
-                href="https://clove-dantal-sample.netlify.app/"
-                target="_blank"
-              >
+              <a href="https://clove-dantal-lp.netlify.app/" target="_blank">
                 <button className="rounded-full sm:px-3 px-2 sm:py-2 py-1 mt-2 duration-300 ease-in-out text-white flex bg-[#59d0b4] active:scale-110 active:duration-0 hover:bg-[#56c1a8] sm:text-base text-sm items-center">
                   Check live
                   <EnterIcon />
